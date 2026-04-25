@@ -50,9 +50,9 @@ import wraps from '~/assets/images/beebag2.jpg'
 import custom from '~/assets/images/breadbag2.jpg'
 
 const products = [
-  { id: 1, title: 'Beeswax Bread Bag - Standard', image: standard, description: 'Reusable beeswax bread bag, size L. Custom logo and packaging available.', href: '/products/standard' },
-  { id: 2, title: 'Beeswax Wraps - Set of 3', image: wraps, description: 'Assorted sizes, food-safe, machine-washable. Perfect starter set.', href: '/products/wraps' },
-  { id: 3, title: 'Custom Eco Bag', image: custom, description: 'Custom sizes and packaging for wholesale OEM orders.', href: '/products/custom' }
+  { id: 1, title: 'Beeswax Bread Bag - Standard', image: standard, description: 'Reusable beeswax bread bag, size L. Custom logo and packaging available.', href: '/contact' },
+  { id: 2, title: 'Beeswax Wraps - Set of 3', image: wraps, description: 'Assorted sizes, food-safe, machine-washable. Perfect starter set.', href: '/contact' },
+  { id: 3, title: 'Custom Eco Bag', image: custom, description: 'Custom sizes and packaging for wholesale OEM orders.', href: '/contact' }
 ]
 
 definePageMeta({

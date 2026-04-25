@@ -132,7 +132,7 @@ import WhyChooseUs from '~/components/WhyChooseUs.vue'
 import ProductCard from '~/components/ProductCard.vue'
 import Testimonials from '~/components/Testimonials.vue'
 import Footer from '~/components/Footer.vue'
-import factory1 from '~/assets/images/factory2.jpg'
+import factory1 from '~/assets/images/factory1.png'
 import factory2 from '~/assets/images/factory2.png'
 import standard from '~/assets/images/bee1.jpg'
 import wraps from '~/assets/images/breadbag1.jpg'
@@ -140,9 +140,9 @@ import custom from '~/assets/images/beebag1.jpg'
 import { ref } from 'vue'
 
 const productsList = [
-  { id: 1, title: 'Beeswax Bread Bag - Standard', image: standard, description: 'Reusable beeswax bread bag, size L. Custom logo and packaging available.', href: '/products/standard' },
-  { id: 2, title: 'Beeswax Wraps - Set of 3', image: wraps, description: 'Assorted sizes, food-safe, machine-washable. Perfect starter set.', href: '/products/wraps' },
-  { id: 3, title: 'Custom Eco Bag', image: custom, description: 'Custom sizes and packaging for wholesale OEM orders.', href: '/products/custom' }
+  { id: 1, title: 'Beeswax Bread Bag - Standard', image: standard, description: 'Reusable beeswax bread bag, size L. Custom logo and packaging available.', href: '/contact' },
+  { id: 2, title: 'Beeswax Wraps - Set of 3', image: wraps, description: 'Assorted sizes, food-safe, machine-washable. Perfect starter set.', href: '/contact' },
+  { id: 3, title: 'Custom Eco Bag', image: custom, description: 'Custom sizes and packaging for wholesale OEM orders.', href: '/contact' }
 ]
 
 const productsSection = ref(null)

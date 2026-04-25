@@ -24,6 +24,11 @@
       </div>
 
       <div>
+        <label class="label">Company Name</label>
+        <input v-model="form.company" type="text" class="input-field" placeholder="Your company name" />
+      </div>
+
+      <div>
         <label class="label">Message</label>
         <textarea v-model="form.message" class="input-field resize-none" rows="5" placeholder="Tell us about your requirements..."></textarea>
         <p v-if="errors.message" class="text-red-500 text-sm mt-1">{{ errors.message }}</p>
@@ -58,8 +63,8 @@
 <script setup>
 import { reactive, ref } from 'vue'
 
-const form = reactive({ name: '', email: '', whatsapp: '', message: '' })
-const errors = reactive({ name: '', email: '', whatsapp: '', message: '' })
+const form = reactive({ name: '', email: '', company: '', whatsapp: '', message: '' })
+const errors = reactive({ name: '', email: '', company: '', whatsapp: '', message: '' })
 const success = ref(false)
 const submitting = ref(false)
 
@@ -91,6 +96,7 @@ async function handleSubmit() {
       body: JSON.stringify({
         name: form.name,
         email: form.email,
+        company: form.company,
         whatsapp: form.whatsapp,
         message: form.message,
       }),
@@ -109,8 +115,8 @@ async function handleSubmit() {
 }
 
 function resetForm() {
-  Object.assign(form, { name: '', email: '', whatsapp: '', message: '' })
+  Object.assign(form, { name: '', email: '', company: '', whatsapp: '', message: '' })
   success.value = false
-  Object.assign(errors, { name: '', email: '', whatsapp: '', message: '' })
+  Object.assign(errors, { name: '', email: '', company: '', whatsapp: '', message: '' })
 }
 </script>

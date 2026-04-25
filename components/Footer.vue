@@ -66,7 +66,7 @@
 
       <!-- Bottom Bar -->
       <div class="border-t border-bark-700 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-bark-400">
-        <p>&copy; {{ new Date().getFullYear() }} YiMei Packaging Co., Ltd. All rights reserved.</p>
+        <p>&copy; {{ new Date().getFullYear() }} GuangXi YiMei Textile Co., Ltd. All rights reserved.</p>
         <div class="flex gap-4">
           <a href="#" class="hover:text-honey-400 transition-colors">Privacy Policy</a>
           <a href="#" class="hover:text-honey-400 transition-colors">Terms of Service</a>

@@ -29,7 +29,45 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' }
-      ]
+      ],
+      script: [
+        {
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'Organization',
+                '@id': 'https://www.beeswaxbag.cn/#organization',
+                name: 'Guangxi YiMei Textile Co., Ltd.',
+                url: 'https://www.beeswaxbag.cn',
+                logo: 'https://www.beeswaxbag.cn/favicon.svg',
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  telephone: '+86-19042786974',
+                  email: 'contact@beeswaxbag.cn',
+                  contactType: 'sales',
+                  availableLanguage: ['English', 'Chinese'],
+                },
+                address: {
+                  '@type': 'PostalAddress',
+                  addressLocality: 'Zhongshan',
+                  addressRegion: 'Hezhou, Guangxi',
+                  addressCountry: 'CN',
+                },
+              },
+              {
+                '@type': 'WebSite',
+                '@id': 'https://www.beeswaxbag.cn/#website',
+                url: 'https://www.beeswaxbag.cn',
+                name: 'YiMei Textile',
+                publisher: { '@id': 'https://www.beeswaxbag.cn/#organization' },
+                inLanguage: 'en',
+              },
+            ],
+          }),
+        },
+      ],
     }
   }
 })
