@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply text-bark-700 bg-cream-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-honey-500 text-white font-semibold rounded-xl
+           shadow-lg shadow-honey-500/25 hover:bg-honey-600 hover:shadow-xl hover:shadow-honey-500/30
+           transition-all duration-300 active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-bark-300 text-bark-700 font-semibold rounded-xl
+           hover:border-honey-500 hover:text-honey-600 hover:bg-honey-50
+           transition-all duration-300;
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-bark-700 text-white font-semibold rounded-xl
+           shadow-lg shadow-bark-700/25 hover:bg-bark-800 hover:shadow-xl
+           transition-all duration-300 active:scale-[0.98];
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-bark-800 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-bark-400 max-w-2xl;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-bark-100/50
+           hover:shadow-lg hover:border-honey-200
+           transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-cream-50 border border-bark-200 rounded-xl
+           focus:outline-none focus:ring-2 focus:ring-honey-400/50 focus:border-honey-400
+           transition-all duration-200 text-bark-700 placeholder-bark-300;
+  }
+
+  .label {
+    @apply block text-sm font-semibold text-bark-600 mb-2;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-honey-500 to-honey-600 bg-clip-text text-transparent;
+  }
+
+  .bg-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 179, 0, 0.08) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  .glass {
+    @apply bg-white/80 backdrop-blur-md;
+  }
+}
