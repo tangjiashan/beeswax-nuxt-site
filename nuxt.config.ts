@@ -31,6 +31,15 @@ export default defineNuxtConfig({
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap' }
       ],
       script: [
+        { src: 'https://www.googletagmanager.com/gtag/js?id=G-8YX343DNZ7', async: true },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-8YX343DNZ7');
+          `,
+        },
         {
           type: 'application/ld+json',
           innerHTML: JSON.stringify({

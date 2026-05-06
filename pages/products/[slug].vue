@@ -112,7 +112,7 @@ if (product) {
   product.image = imageMap[product.slug] || ''
 
   useHead({
-    title: `${product.title} — Beeswax Bags Factory`,
+    title: `${product.title} — Beeswax Bread Bags Factory`,
     meta: [
       { name: 'description', content: product.description },
       { property: 'og:title', content: product.title },
