@@ -15,9 +15,9 @@
       <div class="section-container">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="section-title mb-6">Guangxi YiMei Textile Co., Ltd.</h2>
+            <h2 class="section-title mb-6">Guangxi YiXing Textile Co., Ltd.</h2>
             <p class="text-bark-500 leading-relaxed mb-4">
-              Founded in Hezhou, Guangxi, YiMei Textile is a professional manufacturer of beeswax bags, bread bags, food storage bags and other eco-friendly packaging products. With over 15 years of production experience, our products are exported to Europe, Southeast Asia and 30+ countries worldwide.
+              Founded in Hezhou, Guangxi, YiXing Textile is a professional manufacturer of beeswax bags, bread bags, food storage bags and other eco-friendly packaging products. With over 15 years of production experience, our products are exported to Europe, Southeast Asia and 30+ countries worldwide.
             </p>
             <p class="text-bark-500 leading-relaxed mb-4">
               We operate a complete production line covering raw material sourcing, beeswax formula R&D, fabric processing, finished product manufacturing, and quality inspection. Every step follows the ISO9001 quality management system to ensure stable and reliable product quality.

@@ -14,14 +14,14 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'YiMei Textile — Professional Beeswax Bread Bags Manufacturer',
+      title: 'YiXing Textile — Professional Beeswax Bread Bags Manufacturer',
       htmlAttrs: { lang: 'en' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Professional manufacturer of beeswax bags, bread bags and food storage bags. 15+ years experience, FDA & ISO9001 certified, OEM/ODM available, low MOQ from 200 pcs. Factory direct pricing.' },
         { name: 'keywords', content: 'beeswax bags, beeswax bread bags, food storage bags, reusable wraps, eco packaging, OEM beeswax bags, wholesale beeswax bags, beeswax wrap manufacturer' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'YiMei Textile' }
+        { property: 'og:site_name', content: 'YiXing Textile' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
               {
                 '@type': 'Organization',
                 '@id': 'https://www.beeswaxbag.cn/#organization',
-                name: 'Guangxi YiMei Textile Co., Ltd.',
+                name: 'Guangxi YiXing Textile Co., Ltd.',
                 url: 'https://www.beeswaxbag.cn',
                 logo: 'https://www.beeswaxbag.cn/favicon.svg',
                 contactPoint: {
@@ -69,7 +69,7 @@ export default defineNuxtConfig({
                 '@type': 'WebSite',
                 '@id': 'https://www.beeswaxbag.cn/#website',
                 url: 'https://www.beeswaxbag.cn',
-                name: 'YiMei Textile',
+                name: 'YiXing Textile',
                 publisher: { '@id': 'https://www.beeswaxbag.cn/#organization' },
                 inLanguage: 'en',
               },

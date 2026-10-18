@@ -10,7 +10,7 @@
                 <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z"/>
               </svg>
             </div>
-            <span class="font-bold text-xl text-white"><span class="text-honey-400">YiMei Textile</span></span>
+            <span class="font-bold text-xl text-white"><span class="text-honey-400">YiXing Textile</span></span>
           </div>
           <p class="text-bark-300 text-sm leading-relaxed">
             Professional manufacturer of beeswax bags, bread bags and food storage bags. OEM/ODM available, exporting to 30+ countries worldwide.
@@ -66,7 +66,7 @@
 
       <!-- Bottom Bar -->
       <div class="border-t border-bark-700 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-bark-400">
-        <p>&copy; {{ new Date().getFullYear() }} GuangXi YiMei Textile Co., Ltd. All rights reserved.</p>
+        <p>&copy; {{ new Date().getFullYear() }} GuangXi YiXing Textile Co., Ltd. All rights reserved.</p>
         <div class="flex gap-4">
           <a href="#" class="hover:text-honey-400 transition-colors">Privacy Policy</a>
           <a href="#" class="hover:text-honey-400 transition-colors">Terms of Service</a>

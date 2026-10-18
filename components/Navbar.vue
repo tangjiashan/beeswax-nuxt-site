@@ -24,7 +24,7 @@
           </div>
         </div>
         <div class="flex flex-col">
-          <span class="font-bold text-lg leading-tight text-bark-800 tracking-tight"><span class="text-honey-500">YiMei Textile</span></span>
+          <span class="font-bold text-lg leading-tight text-bark-800 tracking-tight"><span class="text-honey-500">YiXing Textile</span></span>
           <span class="text-[10px] leading-tight text-bark-400 font-medium tracking-widest uppercase">Factory Direct</span>
         </div>
       </NuxtLink>
