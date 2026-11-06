@@ -21,28 +21,27 @@
 
           <!-- Heading -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-bark-800 leading-[1.15] mb-6">
-            Professional <span class="text-gradient">Beeswax Bags</span><br />
-            & Bread Bag Manufacturer
+            Custom Logo <span class="text-gradient">Beeswax Bread Bags</span>
           </h1>
 
           <!-- Subtitle -->
           <p class="text-lg md:text-xl text-bark-500 mb-8 max-w-lg leading-relaxed">
-            OEM/ODM customization available, 15+ years of production experience, FDA certified, exported to 30+ countries worldwide.
+            Put your logo on reusable bread bags for your bakery, shop or private label. Choose a buckle or zipper closure and order from 200 pieces. We also customize canvas cosmetic bags and totes.
           </p>
 
           <!-- CTA Buttons -->
           <div class="flex flex-wrap gap-4 mb-10">
-            <NuxtLink to="/products" class="btn-primary">
-              View Products
+            <NuxtLink to="/beeswax-bread-bags/" class="btn-primary">
+              Explore Beeswax Bread Bags
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
               </svg>
             </NuxtLink>
-            <NuxtLink to="/contact" class="btn-secondary">
+            <NuxtLink to="/contact?product=beeswax-bread-bags" class="btn-secondary">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              Contact Us
+              Request a Quote
             </NuxtLink>
           </div>
 
@@ -54,7 +53,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
                 </svg>
               </div>
-              <span class="text-sm text-bark-600">MOQ <span class="font-bold text-bark-800">200 pcs</span></span>
+              <span class="text-sm text-bark-600">Bread bag MOQ <span class="font-bold text-bark-800">200 pcs</span></span>
             </div>
             <div class="flex items-center gap-2">
               <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
@@ -62,7 +61,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
                 </svg>
               </div>
-              <span class="text-sm text-bark-600"><span class="font-bold text-bark-800">FDA</span> Certified</span>
+              <span class="text-sm text-bark-600">Custom logo printing</span>
             </div>
             <div class="flex items-center gap-2">
               <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
@@ -70,7 +69,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
                 </svg>
               </div>
-              <span class="text-sm text-bark-600">Export to <span class="font-bold text-bark-800">30+</span> Countries</span>
+              <span class="text-sm text-bark-600">Private label orders</span>
             </div>
           </div>
         </div>
@@ -79,8 +78,8 @@
         <div class="relative animate-fade-in" style="animation-delay: 0.2s">
           <div class="rounded-3xl overflow-hidden shadow-2xl shadow-bark-300/20 relative">
             <img
-              src="~/assets/images/main.png"
-              alt="Beeswax bags product showcase"
+              src="~/assets/images/beeswax-bread-bag.jpg"
+              alt="Reusable beeswax bread bag with buckle closure"
               class="w-full h-[400px] md:h-[500px] object-cover"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-bark-800/30 to-transparent" />
@@ -95,8 +94,8 @@
                 </svg>
               </div>
               <div>
-                <p class="font-bold text-bark-800 text-sm">50+ Happy Clients</p>
-                <p class="text-xs text-bark-500">Across 30+ Countries</p>
+                <p class="font-bold text-bark-800 text-sm">Bread bag closures</p>
+                <p class="text-xs text-bark-500">Buckle or L-shaped zipper</p>
               </div>
             </div>
           </div>

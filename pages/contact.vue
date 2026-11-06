@@ -27,7 +27,7 @@
                   </div>
                   <div>
                     <p class="font-medium text-bark-800">Email</p>
-                    <p class="text-bark-500 text-sm">contact@beeswaxbag.cn</p>
+                    <a class="text-bark-500 text-sm" :href="`mailto:${salesEmail}`">{{ salesEmail }}</a>
                   </div>
                 </li>
                 <li class="flex items-start gap-4">
@@ -81,6 +81,7 @@
 </template>
 
 <script setup>
+import { salesEmail } from '~/data/contact'
 import Navbar from '~/components/Navbar.vue'
 import ContactForm from '~/components/ContactForm.vue'
 import Footer from '~/components/Footer.vue'

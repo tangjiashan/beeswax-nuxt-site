@@ -1,3 +1,5 @@
+import { salesEmail } from './data/contact'
+
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   css: ['~/assets/css/tailwind.css'],
@@ -7,18 +9,21 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  routeRules: {
+    '/bags/beeswax-bread-bags': { redirect: { to: '/beeswax-bread-bags/', statusCode: 301 } },
+  },
   nitro: {
     prerender: {
-      routes: ['/', '/products', '/about', '/contact'],
+      routes: ['/', '/products', '/about', '/contact', '/beeswax-bread-bags/', '/bags/canvas-cosmetic-bags', '/bags/canvas-tote-bags'],
     },
   },
   app: {
     head: {
-      title: 'YiXing Textile — Professional Beeswax Bread Bags Manufacturer',
+      title: 'Custom Logo Beeswax Bread Bags | YiXing Textile',
       htmlAttrs: { lang: 'en' },
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Professional manufacturer of beeswax bags, bread bags and food storage bags. 15+ years experience, FDA & ISO9001 certified, OEM/ODM available, low MOQ from 200 pcs. Factory direct pricing.' },
+        { name: 'description', content: 'Order custom logo beeswax bread bags from 200 pieces. Compare buckle and zipper models for wholesale or private label orders. We also customize canvas cosmetic bags and totes.' },
         { name: 'keywords', content: 'beeswax bags, beeswax bread bags, food storage bags, reusable wraps, eco packaging, OEM beeswax bags, wholesale beeswax bags, beeswax wrap manufacturer' },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'YiXing Textile' }
@@ -54,7 +59,7 @@ export default defineNuxtConfig({
                 contactPoint: {
                   '@type': 'ContactPoint',
                   telephone: '+86-19042786974',
-                  email: 'contact@beeswaxbag.cn',
+                  email: salesEmail,
                   contactType: 'sales',
                   availableLanguage: ['English', 'Chinese'],
                 },

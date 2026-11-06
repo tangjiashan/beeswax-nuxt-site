@@ -2,8 +2,8 @@
   <section class="py-20 bg-gradient-to-b from-bark-50 to-white">
     <div class="section-container">
       <div class="text-center mb-14">
-        <h2 class="section-title mb-4">Why Choose Us</h2>
-        <p class="section-subtitle mx-auto">10+ years focused on eco-friendly packaging, a manufacturer you can trust</p>
+        <h2 class="section-title mb-4">Planning Your Custom Bread Bag</h2>
+        <p class="section-subtitle mx-auto">Choose the order quantity, artwork and closure that suit your brand.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
@@ -39,17 +39,17 @@ const features = [
   {
     icon: 'moq',
     title: 'Low MOQ',
-    description: 'Start from just 200 pieces. Small orders also enjoy factory-direct pricing, lowering your procurement threshold.',
+    description: 'Wholesale beeswax bread bag orders start at 200 pieces.',
   },
   {
     icon: 'oem',
-    title: 'Full Customization',
-    description: 'Custom sizes, logo silk-screen printing, and packaging design — tailored to your brand\'s unique identity.',
+    title: 'Logo Printing',
+    description: 'Digital printing suits smaller runs. Keep lettering and fine details at least 3 mm for a legible print.',
   },
   {
-    icon: 'cert',
-    title: 'Eco-Certified Materials',
-    description: 'FDA, ISO9001, and SGS certified. Made with natural beeswax, organic cotton, and other eco-friendly materials.',
+    icon: 'closure',
+    title: 'Closure Options',
+    description: 'Choose the YX-2025 buckle bag or the YX-2027 with an L-shaped zipper. Both standard models measure 33 × 43 cm.',
   },
 ]
 </script>

@@ -13,7 +13,7 @@
             <span class="font-bold text-xl text-white"><span class="text-honey-400">YiXing Textile</span></span>
           </div>
           <p class="text-bark-300 text-sm leading-relaxed">
-            Professional manufacturer of beeswax bags, bread bags and food storage bags. OEM/ODM available, exporting to 30+ countries worldwide.
+            We make custom logo beeswax bread bags for wholesale and private label orders. Canvas cosmetic bags and totes can also carry your brand.
           </p>
         </div>
 
@@ -45,7 +45,7 @@
               <svg class="w-4 h-4 text-honey-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              <span>contact@beeswaxbag.cn</span>
+              <a :href="`mailto:${salesEmail}`">{{ salesEmail }}</a>
             </li>
             <li class="flex items-center gap-2">
               <svg class="w-4 h-4 text-honey-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -75,3 +75,7 @@
     </div>
   </footer>
 </template>
+
+<script setup>
+import { salesEmail } from '~/data/contact'
+</script>

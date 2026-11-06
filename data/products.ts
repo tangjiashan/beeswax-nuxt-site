@@ -12,7 +12,7 @@ export const products = [
     slug: 'wraps',
     title: 'Beeswax Wraps - Set of 3',
     image: '',
-    description: 'Assorted sizes, food-safe, machine-washable.',
+    description: 'Set of three beeswax wraps in assorted sizes.',
     href: '/products/wraps'
   },
   {

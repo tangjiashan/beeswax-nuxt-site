@@ -35,7 +35,7 @@
               <dl class="space-y-3 text-sm">
                 <div class="flex justify-between">
                   <dt class="text-bark-400">Material</dt>
-                  <dd class="font-medium text-bark-700">Organic Cotton + Natural Beeswax</dd>
+                  <dd class="font-medium text-bark-700">Cotton + Natural Beeswax</dd>
                 </div>
                 <div class="flex justify-between border-t border-bark-100 pt-3">
                   <dt class="text-bark-400">Min Order</dt>
@@ -44,10 +44,6 @@
                 <div class="flex justify-between border-t border-bark-100 pt-3">
                   <dt class="text-bark-400">Lead Time</dt>
                   <dd class="font-medium text-bark-700">15-25 days</dd>
-                </div>
-                <div class="flex justify-between border-t border-bark-100 pt-3">
-                  <dt class="text-bark-400">Certification</dt>
-                  <dd class="font-medium text-bark-700">FDA Compliant</dd>
                 </div>
                 <div class="flex justify-between border-t border-bark-100 pt-3">
                   <dt class="text-bark-400">Customization</dt>

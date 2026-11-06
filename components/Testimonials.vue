@@ -52,10 +52,5 @@ const testimonials = [
     role: 'Food Trader — Germany',
     quote: 'The custom logo printing came out sharper than expected — clean and durable. Customer feedback has been excellent. Fast delivery and smooth cooperation throughout.',
   },
-  {
-    name: 'Anna L.',
-    role: 'Eco Brand — Australia',
-    quote: 'FDA and eco-certifications make our products more competitive in the international market. A reliable supplier with solid manufacturing capability and good communication.',
-  },
 ]
 </script>

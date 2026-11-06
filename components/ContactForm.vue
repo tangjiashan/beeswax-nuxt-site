@@ -3,6 +3,7 @@
     <h2 class="text-2xl font-bold text-bark-800 mb-2">Send Us a Message</h2>
     <p class="text-bark-400 mb-8">Fill out the form and we'll get back to you soon.</p>
 
+    <p v-if="category" class="mb-5 font-semibold">Product enquiry: {{ category.title }}</p>
     <form @submit.prevent="handleSubmit" class="space-y-5">
       <div class="grid sm:grid-cols-2 gap-5">
         <div>
@@ -61,7 +62,10 @@
 </template>
 
 <script setup>
-import { reactive, ref } from 'vue'
+import { computed, reactive, ref } from 'vue'
+import { productCategories } from '~/data/product-categories'
+const route = useRoute()
+const category = computed(() => productCategories.find(item => item.slug === route.query.product))
 
 const form = reactive({ name: '', email: '', company: '', whatsapp: '', message: '' })
 const errors = reactive({ name: '', email: '', company: '', whatsapp: '', message: '' })
@@ -94,6 +98,7 @@ async function handleSubmit() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
+        product: category.value?.title,
         name: form.name,
         email: form.email,
         company: form.company,
