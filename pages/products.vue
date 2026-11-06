@@ -15,8 +15,8 @@
       <div class="section-container">
         <div class="grid items-stretch gap-8 lg:grid-cols-3">
           <article v-for="product in productCategories" :key="product.id" class="card overflow-hidden flex flex-col">
-            <NuxtLink v-if="product.image" :to="product.path" :aria-label="'Learn about ' + product.title">
-              <img :src="product.image" :alt="product.photos[0].label" class="w-full h-64 object-contain bg-bark-50" />
+            <NuxtLink v-if="product.photos.length" :to="product.path" :aria-label="'Learn about ' + product.title">
+              <img :src="product.photos[0]?.src" :alt="product.photos[0].label" class="w-full h-64 object-contain bg-bark-50" />
             </NuxtLink>
             <div class="p-6 flex flex-col flex-1">
               <h2 class="font-bold text-2xl text-bark-800"><NuxtLink :to="product.path">{{ product.title }}</NuxtLink></h2>

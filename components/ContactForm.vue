@@ -19,9 +19,16 @@
       </div>
 
       <div>
-        <label class="label">WhatsApp</label>
-        <input v-model="form.whatsapp" type="tel" class="input-field" placeholder="+86 137 1234 5678" aria-required="true" />
-        <p v-if="errors.whatsapp" class="text-red-500 text-sm mt-1">{{ errors.whatsapp }}</p>
+        <label for="whatsapp-number" class="label">WhatsApp</label>
+        <div class="grid gap-2 sm:grid-cols-[min(35%,11rem)_minmax(0,1fr)]">
+          <select v-model="country" aria-label="Country or region calling code" autocomplete="tel-country-code" class="input-field min-w-0">
+            <option value="">Country code</option>
+            <option v-for="item in countries" :key="item.code" :value="item.code">+{{ item.dial }} · {{ item.name }}</option>
+          </select>
+          <input id="whatsapp-number" v-model="form.whatsapp" type="tel" autocomplete="tel" class="input-field min-w-0" placeholder="Phone number" aria-required="true" aria-describedby="whatsapp-help whatsapp-error" :aria-invalid="Boolean(errors.whatsapp)" />
+        </div>
+        <p id="whatsapp-help" class="text-sm mt-1">Choose a country for a local number, or enter a full number starting with +.</p>
+        <p id="whatsapp-error" aria-live="polite" class="text-red-500 text-sm">{{ errors.whatsapp }}</p>
       </div>
 
       <div>
@@ -62,6 +69,7 @@
 </template>
 
 <script setup>
+import parsePhoneNumber, { getCountries, getCountryCallingCode } from 'libphonenumber-js/min'
 import { computed, reactive, ref } from 'vue'
 import { productCategories } from '~/data/product-categories'
 const route = useRoute()
@@ -76,15 +84,32 @@ function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
 }
 
-function validateWhatsApp(number) {
-  const digits = number.replace(/[^0-9]/g, '')
-  return digits.length >= 8
+const country = ref('')
+const regionNames = new Intl.DisplayNames(['en'], { type: 'region' })
+const countries = getCountries().map(code => ({
+  code, name: regionNames.of(code), dial: getCountryCallingCode(code),
+})).sort((a, b) => a.name.localeCompare(b.name, 'en'))
+
+const phone = computed(() => parsePhoneNumber(form.whatsapp.trim(), {
+  defaultCountry: country.value || undefined,
+  extract: false,
+}))
+
+function whatsappError() {
+  if (!country.value && !form.whatsapp.trim().startsWith('+')) {
+    return 'Choose your country or enter the full number with its calling code.'
+  }
+  if (!phone.value?.isPossible() || phone.value.ext) return 'Enter a valid phone number.'
+  if (country.value && phone.value.countryCallingCode !== getCountryCallingCode(country.value)) {
+    return 'The calling code does not match the selected country.'
+  }
+  return ''
 }
 
 function validate() {
   errors.name = form.name.trim().length < 2 ? 'Please enter your name.' : ''
   errors.email = !validateEmail(form.email) ? 'Please enter a valid email.' : ''
-  errors.whatsapp = !validateWhatsApp(form.whatsapp) ? 'Please enter a valid WhatsApp number.' : ''
+  errors.whatsapp = whatsappError()
   errors.message = form.message.trim().length < 6 ? 'Please enter a brief message.' : ''
   return !errors.name && !errors.email && !errors.whatsapp && !errors.message
 }
@@ -102,13 +127,13 @@ async function handleSubmit() {
         name: form.name,
         email: form.email,
         company: form.company,
-        whatsapp: form.whatsapp,
+        whatsapp: phone.value.number,
         message: form.message,
       }),
     })
     if (response.ok) {
-      success.value = true
       resetForm()
+      success.value = true
     } else {
       console.error('Formspree error:', await response.text())
     }
@@ -120,6 +145,7 @@ async function handleSubmit() {
 }
 
 function resetForm() {
+  country.value = ''
   Object.assign(form, { name: '', email: '', company: '', whatsapp: '', message: '' })
   success.value = false
   Object.assign(errors, { name: '', email: '', company: '', whatsapp: '', message: '' })

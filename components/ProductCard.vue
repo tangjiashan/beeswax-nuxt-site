@@ -2,7 +2,7 @@
   <NuxtLink :to="href" class="group card block overflow-hidden">
     <!-- Image Area -->
     <div v-if="image" class="relative overflow-hidden h-56 bg-bark-50">
-      <img
+      <img loading="lazy" decoding="async"
         :src="image"
         :alt="title"
         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

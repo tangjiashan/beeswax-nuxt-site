@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 210" width="560" height="210">
+  <rect width="560" height="210" fill="#dfece3"/>
+  <g fill="none" stroke="#f4faf3" stroke-width="1.5"><circle cx="456" cy="102" r="92"/><circle cx="456" cy="102" r="106"/></g>
+  <g transform="translate(370 38)" stroke="#356858" stroke-width="2.6" fill="none">
+ <path d="M14 63 47 43 80 63 80 101 47 121 14 101ZM80 63l32-19 33 19v38l-33 19-32-19M47 43V19m65 25V20m33 81 20 12"/>
+ <g fill="#eefaec"><circle cx="47" cy="43" r="9"/><circle cx="80" cy="63" r="10"/><circle cx="80" cy="101" r="8"/><circle cx="112" cy="44" r="7"/><circle cx="145" cy="101" r="9"/></g></g>
+  <g fill="#284f46" font-family="Arial, sans-serif">
+    <text x="24" y="37" font-size="12" letter-spacing="2">TEST REPORT</text>
+    <text x="24" y="103" font-family="Georgia, serif" font-size="47">LFGB</text>
+    <text x="26" y="135" font-size="20">Substance screening</text>
+    <path d="M25 159h252" stroke="#284f46" opacity=".35"/>
+    <text x="26" y="183" font-size="15">HTT202603552CH</text>
+  </g>
+</svg>

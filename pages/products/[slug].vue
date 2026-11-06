@@ -93,9 +93,9 @@
 import Navbar from '~/components/Navbar.vue'
 import Footer from '~/components/Footer.vue'
 import { products } from '~/data/products'
-import standardImg from '~/assets/images/bee1.jpg'
-import wrapsImg from '~/assets/images/beebag1.jpg'
-import customImg from '~/assets/images/breadbag1.jpg'
+import standardImg from '~/assets/images/bee1-jpg.webp'
+import wrapsImg from '~/assets/images/beebag1-jpg.webp'
+import customImg from '~/assets/images/breadbag1-jpg.webp'
 import { useRoute } from 'vue-router'
 import { useHead } from '#imports'
 

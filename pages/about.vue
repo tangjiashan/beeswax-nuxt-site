@@ -27,10 +27,30 @@
             </p>
           </div>
           <div class="relative rounded-2xl overflow-hidden group shadow-lg">
-            <img :src="factory1" alt="Factory" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img loading="lazy" decoding="async" :src="factory1" alt="Factory" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-bark-800/50 to-transparent"></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="test-reports" aria-labelledby="reports-heading" class="py-16 bg-bark-50">
+      <div class="section-container">
+        <h2 id="reports-heading" class="section-title mb-4">Beeswax Bread Bag Test Reports</h2>
+        <p class="max-w-3xl text-bark-600 leading-relaxed">The laboratories list Guangxi YiXing Textile as the applicant and manufacturer. Each result below applies to the submitted sample and the tests identified in that report.</p>
+        <div class="grid gap-6 mt-8 lg:grid-cols-3">
+          <article v-for="report in breadBagReports" :key="report.id" class="card overflow-hidden">
+            <img :src="report.cover" alt="" width="560" height="210" loading="lazy" decoding="async" class="w-full h-auto" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-bark-800">{{ report.heading }}</h3>
+              <p class="mt-2 text-sm text-bark-600">{{ report.models }} · {{ report.date }}</p>
+              <p class="mt-4 text-bark-700 leading-relaxed">{{ report.result }}</p>
+              <p class="mt-4 text-sm text-bark-600">{{ report.lab }}<br />Report {{ report.id }}</p>
+            </div>
+          </article>
+        </div>
+        <p class="mt-8 max-w-3xl text-bark-600">For a custom order, tell us the model, materials and destination market so we can identify the relevant report and discuss any additional testing.</p>
+        <NuxtLink to="/contact?product=beeswax-bread-bags" class="inline-block mt-3 underline font-semibold">Ask about a bread bag report</NuxtLink>
       </div>
     </section>
 
@@ -44,7 +64,7 @@
 
         <div class="grid sm:grid-cols-2 gap-8">
           <div class="relative rounded-2xl overflow-hidden group shadow-lg">
-            <img :src="factory3" alt="Production line" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img loading="lazy" decoding="async" :src="factory3" alt="Production line" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-bark-800/50 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white">
               <p class="font-semibold">Production Workshop</p>
@@ -52,7 +72,7 @@
             </div>
           </div>
           <div class="relative rounded-2xl overflow-hidden group shadow-lg">
-            <img :src="factory2" alt="Quality inspection" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img loading="lazy" decoding="async" :src="factory2" alt="Quality inspection" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-bark-800/50 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white">
               <p class="font-semibold">Quality Inspection</p>
@@ -84,9 +104,39 @@
 </template>
 
 <script setup lang="ts">
-import factory1 from '~/assets/images/factory1.png'
-import factory2 from '~/assets/images/factory2.png'
-import factory3 from '~/assets/images/factory2.jpg'
+import factory1 from '~/assets/images/factory1-png.webp'
+import factory2 from '~/assets/images/factory2-png.webp'
+import factory3 from '~/assets/images/factory2-jpg.webp'
+
+const breadBagReports = [
+  {
+    heading: 'U.S. FDA reference testing',
+    models: 'YX-2025 and YX-2027',
+    date: 'March 2026',
+    result: 'For the cotton cloth, the lab recorded passing results for lead, cadmium, formaldehyde and colour fastness to rubbing.',
+    lab: 'Shenzhen HTT Technology Co., Ltd.',
+    id: 'HTT202603552CH1',
+    cover: '/report-covers/us-cotton.svg',
+  },
+  {
+    heading: 'German LFGB reference testing',
+    models: 'YX-2025 and YX-2027',
+    date: 'March 2026',
+    result: 'The lab reported passing results for the requested tests, including formaldehyde, chlorophenols, organotin compounds and azo dyes.',
+    lab: 'Shenzhen HTT Technology Co., Ltd.',
+    id: 'HTT202603552CH',
+    cover: '/report-covers/de-substances.svg',
+  },
+  {
+    heading: 'EU food contact testing',
+    models: 'YX-2027 cotton cloth',
+    date: 'May 2026',
+    result: 'The cotton cloth sample passed the listed tests, including odour and taste, phthalate content and specific migration of 19 heavy metals.',
+    lab: 'Guangzhou Supreme Technology & Testing Service Co., Ltd.',
+    id: 'XNO260518603FX2-1',
+    cover: '/report-covers/eu-migration.svg',
+  },
+]
 
 definePageMeta({
   title: 'About Us — Beeswax Bread Bags Factory',

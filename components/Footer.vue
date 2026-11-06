@@ -21,10 +21,9 @@
         <div>
           <h4 class="font-semibold text-white mb-4">Products</h4>
           <ul class="space-y-2 text-sm">
-            <li><NuxtLink to="/products" class="hover:text-honey-400 transition-colors">Beeswax Bags</NuxtLink></li>
-            <li><NuxtLink to="/products" class="hover:text-honey-400 transition-colors">Bread Bags</NuxtLink></li>
-            <li><NuxtLink to="/products" class="hover:text-honey-400 transition-colors">Food Storage Bags</NuxtLink></li>
-            <li><NuxtLink to="/products" class="hover:text-honey-400 transition-colors">Custom Bags</NuxtLink></li>
+            <li v-for="category in productCategories" :key="category.slug">
+              <NuxtLink :to="category.path" class="hover:text-honey-400 transition-colors">{{ category.title }}</NuxtLink>
+            </li>
           </ul>
         </div>
 
@@ -77,5 +76,6 @@
 </template>
 
 <script setup>
+import { productCategories } from '~/data/product-categories'
 import { salesEmail } from '~/data/contact'
 </script>

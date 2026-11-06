@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 210" width="560" height="210">
+  <rect width="560" height="210" fill="#dce9f1"/>
+  <g fill="none" stroke="#f6fbff" stroke-width="1.5"><circle cx="456" cy="102" r="92"/><circle cx="456" cy="102" r="106"/></g>
+  <g transform="translate(386 36)" stroke="#416785" stroke-width="2.6" fill="none">
+ <path d="M16 43h109l-7 94q-1 9-10 9H37q-9 0-11-9Z" fill="#f6fbff"/>
+ <path d="M23 91q21-8 46-1t51-1l-4 47q-1 7-10 7H38q-8 0-10-8Z" fill="#a6cdde" stroke="none"/>
+ <path d="m59 32 25 5-11 68-25-4Z" fill="#f3dfb9"/>
+ <path d="M49 113v12m-4-5 4 5 4-5m22-9 9 10m-6-1 6 1v-6M99 57h18m-16 12h14m-14 13h13"/></g>
+  <g fill="#294d65" font-family="Arial, sans-serif">
+    <text x="24" y="37" font-size="12" letter-spacing="2">TEST REPORT</text>
+    <text x="24" y="103" font-family="Georgia, serif" font-size="47">EU</text>
+    <text x="26" y="135" font-size="20">Food contact</text>
+    <path d="M25 159h252" stroke="#294d65" opacity=".35"/>
+    <text x="26" y="183" font-size="15">XNO260518603FX2-1</text>
+  </g>
+</svg>

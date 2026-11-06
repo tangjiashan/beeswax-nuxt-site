@@ -17,7 +17,7 @@
             v-for="product in productCategories"
             :key="product.id"
             :title="product.title"
-            :image="product.image"
+            :image="product.photos[0]?.src"
             :description="product.description"
             href="/products"
             action-label="View products"
@@ -36,7 +36,7 @@
 
         <div class="grid sm:grid-cols-2 gap-8">
           <div class="relative rounded-2xl overflow-hidden group shadow-lg">
-            <img :src="factory1" alt="Factory production line" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img loading="lazy" decoding="async" :src="factory1" alt="Factory production line" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-bark-800/50 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white">
               <p class="font-semibold">Production Line</p>
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="relative rounded-2xl overflow-hidden group shadow-lg">
-            <img :src="factory2" alt="Quality control" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img loading="lazy" decoding="async" :src="factory2" alt="Quality control" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" />
             <div class="absolute inset-0 bg-gradient-to-t from-bark-800/50 to-transparent"></div>
             <div class="absolute bottom-4 left-4 text-white">
               <p class="font-semibold">Quality Control</p>
@@ -89,10 +89,14 @@ import Hero from '~/components/Hero.vue'
 import WhyChooseUs from '~/components/WhyChooseUs.vue'
 import ProductCard from '~/components/ProductCard.vue'
 import Footer from '~/components/Footer.vue'
-import factory1 from '~/assets/images/factory1.png'
-import factory2 from '~/assets/images/factory2.png'
+import factory1 from '~/assets/images/factory1-png.webp'
+import factory2 from '~/assets/images/factory2-png.webp'
 import { productCategories } from '~/data/product-categories'
 import { ref } from 'vue'
 
 const productsSection = ref(null)
+useSeoMeta({
+  title: 'Custom Beeswax Bread Bag Manufacturer | YiXing Textile',
+  description: 'YiXing makes reusable beeswax bread bags printed with your logo for bakeries and wholesale buyers, from 200 pieces. Explore custom canvas cosmetic bags and totes.',
+})
 </script>

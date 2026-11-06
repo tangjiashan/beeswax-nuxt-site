@@ -21,12 +21,12 @@
 
           <!-- Heading -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-bark-800 leading-[1.15] mb-6">
-            Custom Logo <span class="text-gradient">Beeswax Bread Bags</span>
+            Custom <span class="text-gradient">Beeswax Bread Bag</span> Manufacturer
           </h1>
 
           <!-- Subtitle -->
           <p class="text-lg md:text-xl text-bark-500 mb-8 max-w-lg leading-relaxed">
-            Put your logo on reusable bread bags for your bakery, shop or private label. Choose a buckle or zipper closure and order from 200 pieces. We also customize canvas cosmetic bags and totes.
+            We print your logo on reusable beeswax bread bags for bakeries, retailers and private label brands. Bread bag orders start at 200 pieces. We also make canvas cosmetic bags and totes with your logo.
           </p>
 
           <!-- CTA Buttons -->
@@ -77,8 +77,8 @@
         <!-- Right: Image -->
         <div class="relative animate-fade-in" style="animation-delay: 0.2s">
           <div class="rounded-3xl overflow-hidden shadow-2xl shadow-bark-300/20 relative">
-            <img
-              src="~/assets/images/beeswax-bread-bag.jpg"
+            <img fetchpriority="high"
+              src="~/assets/images/beeswax-bread-bag-jpg.webp"
               alt="Reusable beeswax bread bag with buckle closure"
               class="w-full h-[400px] md:h-[500px] object-cover"
             />

@@ -3,7 +3,7 @@
     <Navbar />
     <main class="section-container pt-28 pb-20">
       <NuxtLink to="/products" class="text-bark-600 underline">← All products</NuxtLink>
-      <h1 class="section-title mt-6">{{ product.title }}</h1>
+      <h1 class="section-title mt-6">{{ product.pageTitle }}</h1>
       <p class="mt-4 text-lg">{{ product.description }}</p>
       <div v-if="product.photos.length" class="grid gap-6 sm:grid-cols-2 my-8">
         <figure v-for="photo in product.photos" :key="photo.src" class="card overflow-hidden">
@@ -28,6 +28,7 @@ import { productCategories } from '~/data/product-categories'
 definePageMeta({ key: route => route.path })
 const slug = useRoute().params.category
 const product = productCategories.find(item => item.slug === slug)
-if (!product) throw createError({ statusCode: 404, statusMessage: 'Category not found' })
-useSeoMeta({ title: product.title + ' | YiXing Textile', description: product.description })
+if (!product?.pageTitle) throw createError({ statusCode: 404, statusMessage: 'Category not found' })
+useSeoMeta({ title: product.pageTitle + ' | YiXing Textile', description: product.description })
+useHead({ link: [{ rel: 'canonical', href: 'https://www.beeswaxbag.cn' + product.path }] })
 </script>
