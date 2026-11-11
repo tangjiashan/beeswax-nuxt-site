@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <main class="section-container pt-28 pb-20">
-      <nav aria-label="Breadcrumb" class="text-sm text-bark-600 mb-6"><NuxtLink to="/products" class="underline">Products</NuxtLink> / Beeswax bread bags</nav>
+      <nav aria-label="Breadcrumb" class="text-sm text-bark-600 mb-6"><NuxtLink to="/products/" class="underline">Products</NuxtLink> / Beeswax bread bags</nav>
       <header class="max-w-3xl">
         <p class="font-semibold text-honey-700">Wholesale · OEM · Private label</p>
         <h1 class="section-title mt-2">Custom Logo Beeswax Bread Bags</h1>
@@ -43,7 +43,7 @@
         </section>
         <section class="card p-6"><h2 class="text-2xl font-bold">What changes with an OEM specification?</h2>
           <p class="mt-3">Start with the buckle or L-shaped zipper model. List the dimensions, closure, print and colors you want us to quote. For custom zipper colors, the component minimum is 3,000 metres; ask about stock colors for a shorter run.</p>
-          <p class="mt-3">The standard coating formulation is 85% beeswax, 5% jojoba oil and 10% resin. Confirm fabric construction for the selected model. See the <NuxtLink to="/about#test-reports" class="underline">test reports by bread bag model</NuxtLink> and specify the destination market when asking about your order.</p>
+          <p class="mt-3">The standard coating formulation is 85% beeswax, 5% jojoba oil and 10% resin. Confirm fabric construction for the selected model. See the <NuxtLink to="/about/#test-reports" class="underline">test reports by bread bag model</NuxtLink> and specify the destination market when asking about your order.</p>
         </section>
         <section class="card p-6"><h2 class="text-2xl font-bold">How do I brief a private label order?</h2>
           <p class="mt-3">Describe how the bag should carry your brand: the logo on the fabric, any label text and how the finished bag should be presented for retail. Separate the bag print from packaging requests so each can be reviewed and priced individually.</p>
@@ -66,10 +66,9 @@
 <script setup lang="ts">
 import { productCategories } from '~/data/product-categories'
 const bag = productCategories.find(p => p.slug === 'beeswax-bread-bags')!
-const quote = { path: '/contact', query: { product: bag.slug } }
+const quote = { path: '/contact/', query: { product: bag.slug } }
 useSeoMeta({
   title: 'Custom Logo Beeswax Bread Bags | Wholesale & Private Label | YiXing',
   description: 'Compare two beeswax bread bag closures and plan a wholesale order from 200 pieces. Explore logo printing, OEM specifications, private label briefs and sampling.'
 })
-useHead({ link: [{ rel: 'canonical', href: 'https://www.beeswaxbag.cn/beeswax-bread-bags/' }] })
 </script>

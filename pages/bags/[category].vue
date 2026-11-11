@@ -2,7 +2,7 @@
   <div>
     <Navbar />
     <main class="section-container pt-28 pb-20">
-      <NuxtLink to="/products" class="text-bark-600 underline">← All products</NuxtLink>
+      <NuxtLink to="/products/" class="text-bark-600 underline">← All products</NuxtLink>
       <h1 class="section-title mt-6">{{ product.pageTitle }}</h1>
       <p class="mt-4 text-lg">{{ product.description }}</p>
       <div v-if="product.photos.length" class="grid gap-6 sm:grid-cols-2 my-8">
@@ -16,7 +16,7 @@
           <dl class="mt-4"><div v-for="[label, value] in product.specs" :key="label" class="border-t py-3"><dt class="font-semibold">{{ label }}</dt><dd>{{ value }}</dd></div></dl>
         </section>
         <section class="card p-6 self-start"><h2 class="text-2xl font-bold">Request a quote</h2><p class="my-5">{{ product.brief }}</p>
-          <NuxtLink :to="{ path: '/contact', query: { product: product.slug } }" class="btn-primary">Get a quote</NuxtLink>
+          <NuxtLink :to="{ path: '/contact/', query: { product: product.slug } }" class="btn-primary">Get a quote</NuxtLink>
         </section>
       </div>
     </main>
@@ -30,5 +30,4 @@ const slug = useRoute().params.category
 const product = productCategories.find(item => item.slug === slug)
 if (!product?.pageTitle) throw createError({ statusCode: 404, statusMessage: 'Category not found' })
 useSeoMeta({ title: product.pageTitle + ' | YiXing Textile', description: product.description })
-useHead({ link: [{ rel: 'canonical', href: 'https://www.beeswaxbag.cn' + product.path }] })
 </script>

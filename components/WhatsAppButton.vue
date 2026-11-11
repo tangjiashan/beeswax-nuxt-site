@@ -5,6 +5,7 @@
     rel="noopener noreferrer"
     class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group"
     aria-label="Chat on WhatsApp"
+    data-analytics-position="floating_whatsapp"
   >
     <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-[120px] transition-all duration-300 text-sm font-medium">
       Chat with us

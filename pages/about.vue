@@ -50,7 +50,7 @@
           </article>
         </div>
         <p class="mt-8 max-w-3xl text-bark-600">For a custom order, tell us the model, materials and destination market so we can identify the relevant report and discuss any additional testing.</p>
-        <NuxtLink to="/contact?product=beeswax-bread-bags" class="inline-block mt-3 underline font-semibold">Ask about a bread bag report</NuxtLink>
+        <NuxtLink to="/contact/?product=beeswax-bread-bags" class="inline-block mt-3 underline font-semibold">Ask about a bread bag report</NuxtLink>
       </div>
     </section>
 
@@ -93,7 +93,7 @@
       <div class="section-container relative z-10 text-center">
         <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Looking Forward to Working With You</h2>
         <p class="text-bark-200 text-lg max-w-xl mx-auto mb-10">Get pricing, samples, and customization options. Our team responds within 24 hours.</p>
-        <NuxtLink to="/contact" class="btn-primary text-lg px-8 py-4">
+        <NuxtLink to="/contact/" class="btn-primary text-lg px-8 py-4">
           Contact Us
         </NuxtLink>
       </div>

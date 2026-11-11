@@ -58,7 +58,8 @@
         </button>
       </div>
 
-      <div v-if="success" class="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm">
+      <p v-if="submitError" role="alert" class="text-red-600 text-sm">{{ submitError }}</p>
+      <div v-if="success" role="status" class="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700 text-sm">
         <svg class="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
         </svg>
@@ -72,6 +73,7 @@
 import parsePhoneNumber, { getCountries, getCountryCallingCode } from 'libphonenumber-js/min'
 import { computed, reactive, ref } from 'vue'
 import { productCategories } from '~/data/product-categories'
+import { trackEnquiry } from '~/utils/analytics'
 const route = useRoute()
 const category = computed(() => productCategories.find(item => item.slug === route.query.product))
 
@@ -79,6 +81,7 @@ const form = reactive({ name: '', email: '', company: '', whatsapp: '', message:
 const errors = reactive({ name: '', email: '', company: '', whatsapp: '', message: '' })
 const success = ref(false)
 const submitting = ref(false)
+const submitError = ref('')
 
 function validateEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -115,7 +118,9 @@ function validate() {
 }
 
 async function handleSubmit() {
+  if (submitting.value) return
   success.value = false
+  submitError.value = ''
   if (!validate()) return
   submitting.value = true
   try {
@@ -134,17 +139,19 @@ async function handleSubmit() {
     if (response.ok) {
       resetForm()
       success.value = true
+      trackEnquiry('generate_lead', 'contact_form')
     } else {
-      console.error('Formspree error:', await response.text())
+      submitError.value = 'Your message could not be sent. Please try again or contact us by email or WhatsApp.'
     }
   } catch (e) {
-    console.error('Failed to submit form:', e)
+    submitError.value = 'Unable to connect. Please check your connection and try again, or contact us by email or WhatsApp.'
   } finally {
     submitting.value = false
   }
 }
 
 function resetForm() {
+  submitError.value = ''
   country.value = ''
   Object.assign(form, { name: '', email: '', company: '', whatsapp: '', message: '' })
   success.value = false

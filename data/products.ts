@@ -5,7 +5,7 @@ export const products = [
     title: 'Beeswax Bread Bag - Standard',
     image: '',
     description: 'Reusable beeswax bread bag, size L. Custom logo available.',
-    href: '/products/standard'
+    href: '/products/standard/'
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const products = [
     title: 'Beeswax Wraps - Set of 3',
     image: '',
     description: 'Set of three beeswax wraps in assorted sizes.',
-    href: '/products/wraps'
+    href: '/products/wraps/'
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const products = [
     title: 'Custom Eco Bag',
     image: '',
     description: 'Custom sizes and packaging for wholesale orders.',
-    href: '/products/custom'
+    href: '/products/custom/'
   }
 ]
 

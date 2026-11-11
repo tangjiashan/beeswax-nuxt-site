@@ -19,7 +19,7 @@
             :title="product.title"
             :image="product.photos[0]?.src"
             :description="product.description"
-            href="/products"
+            href="/products/"
             action-label="View products"
           />
         </div>
@@ -66,13 +66,13 @@
         <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Start Your Beeswax Product Line Today</h2>
         <p class="text-bark-200 text-lg max-w-xl mx-auto mb-10">Get pricing, samples, and customization options. Our team responds within 24 hours.</p>
         <div class="flex flex-wrap justify-center gap-4">
-          <NuxtLink to="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-honey-500 text-white font-semibold rounded-xl shadow-lg shadow-honey-500/30 hover:bg-honey-400 hover:shadow-xl transition-all duration-300 text-lg">
+          <NuxtLink to="/contact/" class="inline-flex items-center gap-2 px-8 py-4 bg-honey-500 text-white font-semibold rounded-xl shadow-lg shadow-honey-500/30 hover:bg-honey-400 hover:shadow-xl transition-all duration-300 text-lg">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
             Send Inquiry
           </NuxtLink>
-          <NuxtLink to="/products" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 text-lg">
+          <NuxtLink to="/products/" class="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 text-lg">
             View All Products
           </NuxtLink>
         </div>

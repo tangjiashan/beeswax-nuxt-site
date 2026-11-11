@@ -6,21 +6,21 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.beeswaxbag.cn/products</loc>
+    <loc>https://www.beeswaxbag.cn/products/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.beeswaxbag.cn/about</loc>
+    <loc>https://www.beeswaxbag.cn/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beeswaxbag.cn/contact</loc>
+    <loc>https://www.beeswaxbag.cn/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url><loc>https://www.beeswaxbag.cn/beeswax-bread-bags/</loc></url>
-  <url><loc>https://www.beeswaxbag.cn/bags/canvas-cosmetic-bags</loc></url>
-  <url><loc>https://www.beeswaxbag.cn/bags/canvas-tote-bags</loc></url>
+  <url><loc>https://www.beeswaxbag.cn/bags/canvas-cosmetic-bags/</loc></url>
+  <url><loc>https://www.beeswaxbag.cn/bags/canvas-tote-bags/</loc></url>
 </urlset>

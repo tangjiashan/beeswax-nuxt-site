@@ -17,7 +17,7 @@ export const productCategories = [
     brief: 'Tell us your preferred model, bag size, artwork position, quantity and destination.'
   },
   {
-    id: 2, slug: 'canvas-cosmetic-bags', path: '/bags/canvas-cosmetic-bags', title: 'Canvas Cosmetic Bags',
+    id: 2, slug: 'canvas-cosmetic-bags', path: '/bags/canvas-cosmetic-bags/', title: 'Canvas Cosmetic Bags',
     pageTitle: 'Custom Canvas Cosmetic Bags with Your Logo',
     description: 'Plan a printed canvas pouch for a brush set or beauty gift kit. Choose the opening, lining and logo position around the items your pouch needs to hold.',
     photos: [
@@ -30,7 +30,7 @@ export const productCategories = [
     brief: 'Include your target pouch dimensions, contents, lining preference and order quantity. Materials, print options and minimum quantity are confirmed for each project.'
   },
   {
-    id: 3, slug: 'canvas-tote-bags', path: '/bags/canvas-tote-bags', title: 'Canvas Tote Bags',
+    id: 3, slug: 'canvas-tote-bags', path: '/bags/canvas-tote-bags/', title: 'Canvas Tote Bags',
     pageTitle: 'Custom Canvas Tote Bags with Your Logo',
     description: 'Customize canvas totes for retail, events or boxed gifts. Specify the bag depth, handle length and which side should carry your logo.',
     photos: [

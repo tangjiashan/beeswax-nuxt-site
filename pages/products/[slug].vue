@@ -8,7 +8,7 @@
         <nav class="flex items-center gap-2 text-sm text-bark-400 mb-8">
           <NuxtLink to="/" class="hover:text-honey-500 transition-colors">Home</NuxtLink>
           <span>/</span>
-          <NuxtLink to="/products" class="hover:text-honey-500 transition-colors">Products</NuxtLink>
+          <NuxtLink to="/products/" class="hover:text-honey-500 transition-colors">Products</NuxtLink>
           <span>/</span>
           <span class="text-bark-700">{{ product.title }}</span>
         </nav>
@@ -54,7 +54,7 @@
 
             <!-- CTAs -->
             <div class="flex flex-wrap gap-4">
-              <NuxtLink to="/contact" class="btn-primary text-base">
+              <NuxtLink to="/contact/" class="btn-primary text-base">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                 </svg>
@@ -81,7 +81,7 @@
         </div>
         <h2 class="text-2xl font-bold text-bark-800 mb-3">Product Not Found</h2>
         <p class="text-bark-400 mb-8">The product you're looking for doesn't exist.</p>
-        <NuxtLink to="/products" class="btn-primary">Browse All Products</NuxtLink>
+        <NuxtLink to="/products/" class="btn-primary">Browse All Products</NuxtLink>
       </div>
     </div>
 
@@ -99,9 +99,12 @@ import customImg from '~/assets/images/breadbag1-jpg.webp'
 import { useRoute } from 'vue-router'
 import { useHead } from '#imports'
 
+definePageMeta({ key: route => route.path })
 const route = useRoute()
 const slug = route.params.slug
 const product = products.find(p => p.slug === slug)
+
+if (!product) throw createError({ statusCode: 404, statusMessage: 'Product not found' })
 
 if (product) {
   const imageMap = { standard: standardImg, wraps: wrapsImg, custom: customImg }

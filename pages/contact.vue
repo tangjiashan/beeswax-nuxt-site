@@ -85,4 +85,8 @@ import { salesEmail } from '~/data/contact'
 import Navbar from '~/components/Navbar.vue'
 import ContactForm from '~/components/ContactForm.vue'
 import Footer from '~/components/Footer.vue'
+useSeoMeta({
+  title: 'Request a Custom Bag Quote | YiXing Textile',
+  description: 'Contact YiXing Textile for custom beeswax bread bags, canvas cosmetic bags and totes. Share your quantity, logo and specifications to request a quote.',
+})
 </script>

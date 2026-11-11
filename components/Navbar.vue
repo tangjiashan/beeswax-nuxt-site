@@ -51,7 +51,7 @@
       <div class="flex items-center gap-3">
         <!-- CTA button (desktop) -->
         <NuxtLink
-          to="/contact"
+          to="/contact/"
           class="btn-primary text-sm px-5 py-2.5 hidden md:inline-flex items-center gap-2 group"
         >
           Get Free Quote
@@ -126,7 +126,7 @@
         </div>
         <div class="p-3 pt-0">
           <NuxtLink
-            to="/contact"
+            to="/contact/"
             class="btn-primary text-sm w-full justify-center"
             @click="mobileOpen = false"
           >
@@ -148,9 +148,9 @@ const scrolled = ref(false)
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'Products', path: '/products' },
-  { label: 'About', path: '/about' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Products', path: '/products/' },
+  { label: 'About', path: '/about/' },
+  { label: 'Contact', path: '/contact/' },
 ]
 
 function handleScroll() {

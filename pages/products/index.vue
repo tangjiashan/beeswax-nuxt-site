@@ -26,7 +26,7 @@
               </dl>
               <div class="mt-auto pt-6 flex flex-wrap gap-4 items-center">
                 <NuxtLink :to="product.path" class="underline">Learn more</NuxtLink>
-                <NuxtLink :to="{ path: '/contact', query: { product: product.slug } }" class="btn-primary">Get a quote</NuxtLink>
+                <NuxtLink :to="{ path: '/contact/', query: { product: product.slug } }" class="btn-primary">Get a quote</NuxtLink>
               </div>
             </div>
           </article>
@@ -39,7 +39,7 @@
       <div class="section-container text-center">
         <h2 class="text-2xl font-bold text-bark-800 mb-3">Need Something Custom?</h2>
         <p class="text-bark-500 mb-6">Tell us which bag you need, your quantity and how you would like to customize it.</p>
-        <NuxtLink to="/contact" class="btn-primary">
+        <NuxtLink to="/contact/" class="btn-primary">
           Request Custom Quote
         </NuxtLink>
       </div>
